@@ -1,8 +1,16 @@
-/*
+/* ----------------------------------
+
+FONTS
 
 font-family: 'Raleway', sans-serif;
 
-*/
+---------------------------------- */
+
+
+
+/* ----------------------------------
+GENERAL STYLE
+---------------------------------- */
 
 *
 {
@@ -13,12 +21,16 @@ font-family: 'Raleway', sans-serif;
 
 body
 {
-  background-image: url('images/body_pattern.jpg'), #396;
-  background-blend-mode: soft-light;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container
+{
+  padding: 3%;
+  width: 60%;
 }
 
 h1
@@ -27,25 +39,13 @@ h1
   font-weight: bold;
 }
 
-#orario
-{
-  text-align: center;
-  /*background-color: red;*/
-}
-
 #notifica
 {
-  /*background-color: pink;*/
-  margin-bottom: 30px;
+  /* background-color: pink; */
+  margin: 30px 0 30px 0;
 }
 
 #note
 {
   /*background-color: orangered;*/
-}
-
-.container
-{
-  padding: 3%;
-  width: 60%;
 }
