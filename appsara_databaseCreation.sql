@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Creato il: Mar 23, 2018 alle 17:52
+-- Creato il: Mar 23, 2018 alle 19:04
 -- Versione del server: 10.1.10-MariaDB
 -- Versione PHP: 5.5.33
 
@@ -33,8 +33,16 @@ USE `appsara`;
 CREATE TABLE `log` (
   `id` int(100) NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `id_notifica` int(100) NOT NULL
+  `id_notifica` int(100) NOT NULL,
+  `textarea` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `log`
+--
+
+INSERT INTO `log` (`id`, `time`, `id_notifica`, `textarea`) VALUES
+(11, '2018-03-23 19:03:12', 1, 'kjdhakdakdhakjdkajda');
 
 -- --------------------------------------------------------
 
@@ -54,7 +62,8 @@ CREATE TABLE `notifica` (
 
 INSERT INTO `notifica` (`id`, `notifica`, `descrizione`) VALUES
 (1, 'inizio intervallo', ''),
-(2, 'fine intervallo', '');
+(2, 'fine intervallo', ''),
+(3, 'richiesta colloquio', 'Gli allievi vogliono parlare con teeeeee');
 
 --
 -- Indici per le tabelle scaricate
@@ -81,13 +90,13 @@ ALTER TABLE `notifica`
 -- AUTO_INCREMENT per la tabella `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT per la tabella `notifica`
 --
 ALTER TABLE `notifica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Limiti per le tabelle scaricate
