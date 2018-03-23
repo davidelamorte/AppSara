@@ -10,22 +10,24 @@
   <body>
     <div class="container">
       <h1>Engim Notifiche a Sara</h1>
+      <form class="" action="index.html" method="post">
+        <p id="orario">Timestamp</p><br/>
+        <!-- <select class="form-control form-control-lg">
+          <option>Large select</option>
+        </select> -->
+        <select id="notifica" class="form-control">
+          <option>Array notifiche</option>
+        </select>
+        <!-- <select class="form-control form-control-sm">
+          <option>Small select</option>
+        </select> -->
+        <div class="form-group">
+          <label for="note">Note</label>
+          <textarea class="form-control" id="note" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Invia</button>
+      </form>
 
-      <p id="orario">Timestamp</p><br/>
-      <!-- <select class="form-control form-control-lg">
-        <option>Large select</option>
-      </select> -->
-      <select id="notifica" class="form-control">
-        <option>Array notifiche</option>
-      </select>
-      <!-- <select class="form-control form-control-sm">
-        <option>Small select</option>
-      </select> -->
-      <div class="form-group">
-        <label for="note">Note</label>
-        <textarea class="form-control" id="note" rows="3"></textarea>
-      </div>
-      <button type="button" class="btn btn-primary">Invia</button>
     </div>
   </body>
 </html>
