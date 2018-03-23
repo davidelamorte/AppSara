@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <h1>Engim Notifiche a Sara</h1>
-      <form class="" action="index.html" method="post">
+      <form class="" action="" method="post">
         <p id="orario">Timestamp</p><br/>
         <!-- <select class="form-control form-control-lg">
           <option>Large select</option>
