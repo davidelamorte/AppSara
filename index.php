@@ -13,18 +13,21 @@ $notifiche = getNotifiche();
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Engim Pausa</title>
+    <title>EngimAlert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,800" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <h1>Engim Notifiche a Saretta</h1>
+      <h1>EngimAlert</h1>
+      <p>Notifiche dal corso "TSS1000 ore"</p>
       <form class="" action="result.php" method="post">
         <!-- <select class="form-control form-control-lg">
           <option>Large select</option>
         </select> -->
+        <label for="notifica">Scegli una delle opzioni</label>
         <select id="notifica" name="notifica" class="form-control">
           <?php
           foreach ($notifiche as $notifica) {

@@ -21,6 +21,8 @@ GENERAL STYLE
 
 body
 {
+  color: #fff;
+  background: linear-gradient(45deg, #172, #227);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -33,19 +35,81 @@ body
   width: 60%;
 }
 
-h1
+.container h1
 {
+  margin-top: -30px;
   text-align: center;
   font-weight: bold;
+  font-size: 7em;
+}
+
+.container p
+{
+  text-align: center;
+  font-style: italic;
+  font-size: 2em;
+  margin-bottom: 70px;
 }
 
 #notifica
 {
+  font-weight: 600;
   /* background-color: pink; */
-  margin: 30px 0 30px 0;
+  margin: 0 0 30px 0;
 }
 
 #note
 {
   /*background-color: orangered;*/
+}
+
+.btn-primary
+{
+  width: 20%;
+  transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width:700px)
+{
+  body
+  {
+    background: linear-gradient(90deg, #172, #227);
+  }
+
+  .container
+  {
+    padding: 8%;
+    width: 90%;
+  }
+
+  .container h1
+  {
+    font-size: 4.5em;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+  }
+
+  .container p
+  {
+    font-size: 1.5em;
+  }
+
+  label
+  {
+    font-size: 1.2em;
+  }
+
+  .btn-primary
+  {
+    margin-top: 20px;
+    font-size: 1.7em;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    letter-spacing: 5px;
+  }
+
+  .btn-primary:hover
+  {
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,.5));
+  }
 }
