@@ -1,0 +1,101 @@
+/* ----------------------------------
+FONTS
+font-family: 'Raleway', sans-serif;
+---------------------------------- */
+
+
+
+/* ----------------------------------
+GENERAL STYLE
+---------------------------------- */
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+body
+{
+  color: #fff;
+  background: linear-gradient(45deg, #172, #227);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#tb-container
+{
+  margin-top: 40px;
+  /* background-color: orange; */
+}
+
+/* .table-box
+{
+
+  width: 100%;
+  height: 60vh;
+  overflow-x: hidden;
+  background-color: red;
+} */
+
+.table
+{
+  margin-top: 80px;
+  height: 300px;
+  overflow: hidden;
+  overflow-y: scroll;
+  /* background-color: pink; */
+}
+
+thead
+{
+  display: inline;
+}
+
+.fixed-head
+{
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 98.6%;
+  border: none;
+  background-color: rgba(0,0,0,.4);
+}
+
+[class*='info']
+{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  border: none;
+}
+
+.info1
+{
+  width: 17.5%;
+}
+
+.info2
+{
+  width: 62.5%;
+}
+
+.fixed-head .info1,
+.fixed-head .info2
+{
+  border-bottom: none;
+}
+
+th.info1,
+th.info2
+{
+  border-top: none;
+}
+
+tbody .info1,
+tbody .info2
+{
+  font-size: 14px;
+}
