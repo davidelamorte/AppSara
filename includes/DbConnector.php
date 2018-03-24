@@ -2,8 +2,8 @@
 
 class DbConnector {
 
-  protected static $dsn = 'mysql:dbname=appsara;host=localhost';
-  protected static $user = 'root';
+  protected static $dsn = 'mysql:dbname=my_engimalert;host=localhost';
+  protected static $user = 'engimalert';
   protected static $password = '';
 
   private function setUser($user)

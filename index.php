@@ -1,50 +1,42 @@
-<?php
-
-include "includes/functions.php";
-
-
-$notifiche = getNotifiche();
-
-
-?>
-
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>EngimAlert</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,800" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>EngimAlert</h1>
-      <p>Notifiche dal corso "TSS1000 ore"</p>
-      <form class="" action="result.php" method="post">
-        <!-- <select class="form-control form-control-lg">
-          <option>Large select</option>
-        </select> -->
-        <label for="notifica">Scegli una delle opzioni</label>
-        <select id="notifica" name="notifica" class="form-control">
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="AlterVista - Editor HTML"/>
+  <title>Engim Alert</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">    
+        <?php
+        include "includes/functions.php";
+        $logs = getLog();        
+        ?>
+</head>
+<body>
+<div class="col-md-11 mx-auto mt-5">
+
+<h1>Status Attuale: <?= $logs[0]['id_notifica']  ?> </h1>
+
+<a href="admin.php">Admin Page</a>
+  <table class="table bg-primary text-light">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID Notifica</th>
+          <th scope="col">Messaggio</th>
+          <th scope="col">Data</th>          
+        </tr>
+      </thead>
+      <tbody>
+
           <?php
-          foreach ($notifiche as $notifica) {
-            echo "<option value=\"".$notifica['id']."\">".$notifica['notifica']."</option>";
-          }
+          foreach($logs as $l){
+          echo "<tr>
+            <th scope='row'>•</th><td>".$l['id_notifica']."</td> <td>".$l['textarea']."</td><td>".$l['time']."</td></tr>";
+        }
           ?>
 
-        </select>
-        <!-- <select class="form-control form-control-sm">
-          <option>Small select</option>
-        </select> -->
-        <div class="form-group">
-          <label for="note">Note</label>
-          <textarea name="textarea" class="form-control" id="note" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Invia</button>
-      </form>
-    </div>
-  </body>
+        </tbody>
+    </table>
+</div>
+</body>
 </html>

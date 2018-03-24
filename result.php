@@ -2,10 +2,23 @@
 
 include "includes/functions.php";
 
-echo "<pre>";
-print_r($_POST);
+if($_SERVER['REQUEST_METHOD']==='POST') {
 
-saveNotifica($_POST);
-header('Location: index.php');
+$date = date("j-m-Y | H:i:s");
 
-?>
+$dati = [];
+$dati["notifica"] = ( isset($_POST['notifica']) ? trim($_POST['notifica']) : "");
+$dati["textarea"] = ( isset($_POST['textarea']) ? trim($_POST['textarea']) : "");
+$dati["date"] = $date;
+
+$dest = "kanjy5@gmail.com";
+
+if($dati["notifica"] == "In Pausa") {
+sendEmail($dest, $dati);
+}
+
+saveNotifica($dati);
+}
+
+header("Location: index.php");
+?> 
